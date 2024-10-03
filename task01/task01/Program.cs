@@ -10,6 +10,7 @@ namespace task01
     {
         static void Main(string[] args)
         {
+            ConsoleColor originalColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("А вы могли бы?");
 
@@ -27,8 +28,8 @@ namespace task01
             Console.WriteLine("могли бы");
             Console.WriteLine("на флейте водосточных труб?");
 
-            Console.ResetColor();
-
+            Console.ForegroundColor = originalColor;
+            Console.WriteLine("Цвет текста возвращен в исходное состояние.");
             Console.ReadKey();
         }
     }
